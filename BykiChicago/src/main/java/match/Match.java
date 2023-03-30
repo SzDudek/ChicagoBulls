@@ -25,7 +25,7 @@ public class Match {
     static int roundPart = 1;
 
     public void whoseBall() {                   //notify about the possesion of the ball
-        System.out.println("Match.Team 1: " + Match.teams.get(0).isBallPos() + " Match.Team 2: " + Match.teams.get(1).isBallPos());
+        System.out.println("Team 1: " + Match.teams.get(0).isBallPos() + " Team 2: " + Match.teams.get(1).isBallPos());
         System.out.println("1: " + Match.teams.get(0).lineup.get(0).isBallPos() + " 2: " + Match.teams.get(0).lineup.get(1).isBallPos() + " 3: " + Match.teams.get(0).lineup.get(2).isBallPos());
         System.out.println("1: " + Match.teams.get(1).lineup.get(0).isBallPos() + " 2: " + Match.teams.get(1).lineup.get(1).isBallPos() + " 3: " + Match.teams.get(1).lineup.get(2).isBallPos());
     }
@@ -61,8 +61,8 @@ public class Match {
         for (int i = 1; i < 3; i++) {                   //choosing and creating the players
             for (int k = 1; k < 4; k++) {
                 System.out.println("Select the player " + k + " of the team " + Match.teams.get(i - 1).getName() + " by typing the number :");
-                System.out.println("1. playerClasses.Custom player - no special skill");
-                System.out.println("2. playerClasses.Beanpole - special skill: dunk (100% accuracy shot from close range)");
+                System.out.println("1. Custom player - no special skill");
+                System.out.println("2. Beanpole - special skill: dunk (100% accuracy shot from close range)");
                 System.out.println("3. Speedie - special skill: turbo (double move in the round)");
                 System.out.println("4. Big Guy - special skill: block (100% retake)");
                 System.out.println("Your choice: ");
@@ -84,13 +84,13 @@ public class Match {
                             System.out.println("Enter passing 0-100: ");
                             passing = scaner.nextInt();
                             new Custom(speed, accuracy, passing, defence, i, k);
-                            System.out.println("playerClasses.Custom player has been successfully created");
+                            System.out.println("Custom player has been successfully created");
                             sleep(1500);
                             System.out.print("\033[H\033[2J");
                             System.out.flush();
                             break choice;
                         case 2:
-                            System.out.println("playerClasses.Beanpole class player has been successfully created");
+                            System.out.println("Beanpole class player has been successfully created");
                             new Beanpole(i, k);
                             sleep(1500);
                             System.out.print("\033[H\033[2J");
@@ -120,7 +120,7 @@ public class Match {
         }
 
         sort(allPlayers);
-
+        Ball ball = new Ball();
         Court.displayField();
         for (int z = 0; z < 6; z++) {               //activity log
             Match.allPlayers.get(z).moveDirection(Ball.getX(), Ball.getY());

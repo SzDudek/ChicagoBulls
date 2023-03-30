@@ -26,7 +26,7 @@ public class Beanpole extends Player {
             if (dunk == 10) {
                 if (this.getTeamId() == 1) {
                     if (getDestX() >= 48 && getDestY() >= 4 && getDestY() <= 6 && this.isBallPos() && getDestX() == this.getX() && getDestY() == this.getDestY()) {
-                        System.out.println("playerClasses.Player " + getPlayerCount() + " of the team " + Match.getTeams().get(this.getTeamId() - 1).getName() + " uses special skill - dunk");
+                        System.out.println("Player " + getPlayerCount() + " of the team " + Match.getTeams().get(this.getTeamId() - 1).getName() + " uses special skill - dunk");
                         int tempCelnosc = getAccuracy();
                         setAccuracy(100);
                         shoot();
@@ -35,7 +35,7 @@ public class Beanpole extends Player {
                     }
                 } else {
                     if (getDestX() <= 2 && getDestY() >= 4 && getDestY() <= 6 && this.isBallPos() && getDestX() == this.getX() && getDestY() == this.getDestY()) {
-                        System.out.println("playerClasses.Player " + getPlayerCount() + " of the team " + Match.getTeams().get(this.getTeamId() - 1).getName() + " uses special skill - dunk");
+                        System.out.println("Player " + getPlayerCount() + " of the team " + Match.getTeams().get(this.getTeamId() - 1).getName() + " uses special skill - dunk");
                         int tempCelnosc = getAccuracy();
                         setAccuracy(100);
                         shoot();

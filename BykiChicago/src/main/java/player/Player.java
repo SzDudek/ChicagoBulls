@@ -497,7 +497,7 @@ public abstract class Player implements Actions {
                                                                 //shooting
     public void shoot() {
         if (this.x == destX && this.y == destY && this.ballPos) {
-            System.out.println("playerClasses.Player " + this.playerCount + " of the team " + Match.getTeams().get(this.teamId - 1).getName() + " shoots and... ");
+            System.out.println("Player " + this.playerCount + " of the team " + Match.getTeams().get(this.teamId - 1).getName() + " shoots and... ");
             Random scoring = new Random();
             int t = scoring.nextInt(101);
             this.ballPos = false;

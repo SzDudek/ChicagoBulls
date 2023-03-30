@@ -26,7 +26,7 @@ public class BigGuy extends Player {
     public void specialSkill() {
         if (Match.getRoundPart() == 3) {
             if (block == 10 && Math.abs(this.getX() - Ball.getX()) <= 1 && Math.abs(this.getY() - Ball.getY()) <= 1) {
-                System.out.println("playerClasses.Player " + getPlayerCount() + " of the team " + Match.getTeams().get(this.getTeamId() - 1).getName() + " uses special skill - block");
+                System.out.println("Player " + getPlayerCount() + " of the team " + Match.getTeams().get(this.getTeamId() - 1).getName() + " uses special skill - block");
                 int temp = getDefence();
                 setDefence(100);
                 retake(Ball.getX(), Ball.getY(), Court.courtState[Ball.getX()][Ball.getY()]);

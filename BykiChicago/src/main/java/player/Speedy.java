@@ -24,7 +24,7 @@ public class Speedy extends Player {
     public void specialSkill() {
         if (Match.getRoundPart() == 1) {
             if (speed == 10) {
-                System.out.println("playerClasses.Player " + getPlayerCount() + " of the team " + Match.getTeams().get(this.getTeamId() - 1).getName() + " uses special skill - turbo");
+                System.out.println("Player " + getPlayerCount() + " of the team " + Match.getTeams().get(this.getTeamId() - 1).getName() + " uses special skill - turbo");
                 move();
                 speed = 0;
             } else if (speed < 10) {
