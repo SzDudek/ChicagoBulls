@@ -1,7 +1,0 @@
-STATYSTYKI MECZU
-Stonerzy | Piwosze
-SCORE: 0 : 6
-TRAFIONE: 0 : 2
-NIETRAFIONE: 0 : 4
-TRÓJKI: 0 : 2
-STEALE: 40 : 45
