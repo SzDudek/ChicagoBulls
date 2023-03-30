@@ -6,12 +6,12 @@ import player.Speedy;
 import player.BigGuy;
 import player.Player;
 import statsOutput.BoxScore;
-import statsOutput.ToFile;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 import static java.lang.Thread.sleep;
+import static statsOutput.ToFile.Write;
 
 public class Match {
     public static final String ANSI_RED = "\u001B[31m";
@@ -57,8 +57,6 @@ public class Match {
         teamName = scaner.next();
         Team team2 = new Team(teamCount, teamName);
         teams.add(team2);
-        Ball ball = new Ball();
-        BoxScore boxScore = new BoxScore();
         Court.displayField();
         for (int i = 1; i < 3; i++) {                   //choosing and creating the players
             for (int k = 1; k < 4; k++) {
@@ -127,7 +125,7 @@ public class Match {
         for (int z = 0; z < 6; z++) {               //activity log
             Match.allPlayers.get(z).moveDirection(Ball.getX(), Ball.getY());
         }
-        while (boxScore.getTeam1Score() < 5 && boxScore.getTeam2Score() < 5) {
+        while (BoxScore.getTeam1Score() < 5 && BoxScore.getTeam2Score() < 5) {
             //for(int i=0;i<50;i++){
             sleep(500);
             System.out.println("%%%%%%%%%%%%%%%%    Movement    %%%%%%%%%%%%%%%%%");
@@ -168,8 +166,8 @@ public class Match {
             sleep(100);
             System.out.println();
         }                           //saving the stats to the text file
-        ToFile save = new ToFile();
-        save.Write();
+
+        Write();
     }
 
     public static ArrayList<Team> getTeams() {
