@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="BykiChicago:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/BykiChicago_jar</output-path>
-    <root id="archive" name="BykiChicago.jar">
-      <element id="module-output" name="BykiChicago" />
-    </root>
-  </artifact>
-</component>
