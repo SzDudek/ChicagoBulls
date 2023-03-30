@@ -3,6 +3,29 @@ target/
 !/src/main//target/
 !/src/test//target/
 
+### Java ###
+*.class
+
+### Gradle ###
+.gradle
+/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Avoid ignore Gradle wrappper properties
+!gradle-wrapper.properties
+
+# Cache of project
+.gradletasknamecache
+
+### Gradle Patch ###
+# Java heap dump
+*.hprof
+
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
